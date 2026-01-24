@@ -216,3 +216,18 @@ footer a:hover {
     color: #ffffff !important;
     text-decoration: underline;
 }
+
+/* --- Banner de Cookies (LGPD) - NOVO --- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--text-dark); /* Fundo escuro */
+    color: #fff;
+    padding: 15px 0;
+    z-index: 9999; /* Fica acima de tudo */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    display: none; /* Começa invisível, o JS que vai mostrar */
+    border-top: 2px solid var(--primary); /* Detalhe na cor da marca */
+}

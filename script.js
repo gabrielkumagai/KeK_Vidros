@@ -86,6 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (gridGaleria) {
         initGaleria(gridGaleria);
     }
+
+    // 4. Inicializa Banner de Cookies (NOVO)
+    initCookies();
 });
 
 // ==========================================
@@ -213,5 +216,31 @@ function abrirImagemLightbox(src) {
         modalImg.src = src;
         const myModal = new bootstrap.Modal(modalEl);
         myModal.show();
+    }
+}
+
+// ==========================================
+// FUNÇÃO: BANNER DE COOKIES (LGPD) - NOVO
+// ==========================================
+function initCookies() {
+    const cookieBanner = document.getElementById('cookieBanner');
+    const btnAccept = document.getElementById('btnAcceptCookies');
+
+    // 1. Verifica se já aceitou (olhando no armazenamento do navegador)
+    if (!localStorage.getItem('cookiesAceitos')) {
+        // Se NÃO aceitou ainda, mostra o banner após 2 segundos
+        setTimeout(() => {
+            if(cookieBanner) cookieBanner.style.display = 'block';
+        }, 2000);
+    }
+
+    // 2. Evento de Clique no botão
+    if(btnAccept) {
+        btnAccept.addEventListener('click', () => {
+            // Salva a decisão no navegador do usuário
+            localStorage.setItem('cookiesAceitos', 'true');
+            // Esconde o banner
+            cookieBanner.style.display = 'none';
+        });
     }
 }
