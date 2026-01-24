@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K&K Vidros | Design & Sofisticação</title>
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <a href="https://wa.me/5514981266008" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">K&K<span>VIDROS</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-center text-uppercase fw-semibold small gap-1">
+                    <li class="nav-item"><a class="nav-link px-3" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#diferenciais">Vantagens</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#quem-somos">Sobre</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn btn-primary rounded-0 fw-bold" href="https://wa.me/5514981266008">Solicitar Orçamento</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active hero-slide" style="background-image: url('https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=1500');">
+                <div class="carousel-overlay d-flex align-items-center">
+                    <div class="container text-white px-4">
+                        <span class="badge bg-primary mb-3 rounded-0 p-2 ls-2">KEK VIDROS</span>
+                        <h1 class="display-4 fw-bold mb-4">Elegância em <br><span class="text-accent">Vidros e Alumínio</span></h1>
+                        <p class="lead mb-4 d-none d-md-block col-lg-6 opacity-75">Transforme seu projeto com acabamento impecável e materiais de alta durabilidade.</p>
+                        <a href="#catalogo" class="btn btn-outline-light rounded-0 px-5 py-3 fw-bold">Ver Catálogo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item hero-slide" style="background-image: url('https://images.unsplash.com/photo-1618220179428-22790b461013?w=1500');">
+                <div class="carousel-overlay d-flex align-items-center">
+                    <div class="container text-white px-4">
+                        <span class="badge bg-primary mb-3 rounded-0 p-2 ls-2">DESIGN EXCLUSIVO</span>
+                        <h1 class="display-4 fw-bold mb-4">Espelhos <br><span class="text-accent"></span></h1>
+                        <p class="lead mb-4 d-none d-md-block col-lg-6 opacity-75">Modernidade e sofisticação para ampliar seus ambientes.</p>
+                        <a href="https://wa.me/5514981266008" class="btn btn-primary rounded-0 px-5 py-3 fw-bold">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+    </header>
+
+    <section id="catalogo" class="py-5">
+        <div class="container py-5">
+            <div class="row mb-5 align-items-end">
+                <div class="col-md-8 text-center text-md-start">
+                    <h6 class="text-accent fw-bold text-uppercase ls-2">Nossas Coleções</h6>
+                    <h2 class="display-6 fw-bold">Catálogo de Produtos</h2>
+                    <div class="line-accent mt-3 mx-auto mx-md-0"></div>
+                </div>
+                <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+                    <p class="text-muted small">Clique nos itens para ver a galeria.</p>
+                </div>
+            </div>
+            <div id="grid-catalogo" class="row g-4"></div>
+        </div>
+    </section>
+
+    <section id="diferenciais" class="py-5 bg-light-alt">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">A Experiência Kek Vidros</h2>
+                <p class="text-muted">Detalhes que fazem a diferença.</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="bg-white p-5 h-100 shadow-sm hover-card border-bottom border-4" style="border-color: var(--primary) !important;">
+                        <i class="fas fa-shield-alt fa-3x icon-box mb-3"></i>
+                        <h4 class="fw-bold">Durabilidade</h4>
+                        <p class="text-muted small">Materiais nobres que resistem ao tempo com elegância.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-5 h-100 shadow-sm hover-card border-bottom border-4" style="border-color: var(--primary) !important;">
+                        <i class="fas fa-ruler-combined fa-3x icon-box mb-3"></i>
+                        <h4 class="fw-bold">Sob Medida</h4>
+                        <p class="text-muted small">Projetos milimétricos para um acabamento perfeito.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-5 h-100 shadow-sm hover-card border-bottom border-4" style="border-color: var(--primary) !important;">
+                        <i class="fas fa-star fa-3x icon-box mb-3"></i>
+                        <h4 class="fw-bold">Instalação Técnica</h4>
+                        <p class="text-muted small">Equipe especializada e rigor técnico em cada obra.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quem-somos" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
+                    <h6 class="text-accent fw-bold text-uppercase ls-2">Nossa História</h6>
+                    <h2 class="fw-bold mb-4">Tradição e Modernidade em Garça</h2>
+                    <p class="text-muted">A <strong>Kek Vidros</strong> é sinônimo de excelência. Unimos o design contemporâneo à robustez dos melhores materiais para garantir segurança e valorização do seu imóvel.</p>
+                    <ul class="list-unstyled mt-4 text-muted">
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Projetos residenciais e comerciais.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Consultoria especializada.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Garantia de qualidade.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" class="img-fluid shadow rounded-1 w-100" alt="Sobre">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                
+                <div class="col-md-4 mb-4">
+                    <img src="img/logosemfundos.png" alt="Kek Vidros" class="mb-3 img-fluid" style="max-width: 160px; filter: brightness(0) invert(1);">
+                    <p class="small opacity-75" style="color: rgba(255,255,255,0.7) !important;">
+                        Soluções completas em vidros temperados, espelhos e esquadrias de alumínio para projetos residenciais e comerciais.
+                    </p>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Contato</h5> <ul class="list-unstyled small">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-white"></i> <span style="color: rgba(255,255,255,0.7);">Carlos Ferrari, 1135 - Garça/SP</span></li>
+                        <li class="mb-2"><i class="fas fa-phone me-2 text-white"></i> <span style="color: rgba(255,255,255,0.7);">(14) 98126-6008</span></li>
+                        <li class="mb-2"><i class="fas fa-clock me-2 text-white"></i> <span style="color: rgba(255,255,255,0.7);">Seg - Sex: 08:00 - 18:00</span></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Redes Sociais</h5> <div class="d-flex justify-content-center justify-content-md-start gap-3">
+                        <a href="https://www.instagram.com/kekvidros/" target="_blank" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://www.facebook.com/kek.vidros" target="_blank" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="https://wa.me/5514981266008" target="_blank" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="border-secondary opacity-25">
+            <div class="text-center small opacity-50" style="color: rgba(255,255,255,0.5) !important;">
+                &copy; 2026 K&K Vidros. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0 border-0">
+                <div class="modal-header bg-light-alt border-0">
+                    <h5 class="modal-title fw-bold" id="modalTitle">Detalhes do Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="modal-img-container">
+                        <img id="modalImg" src="" alt="">
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p id="modalDesc" class="text-muted mb-4"></p>
+                        <button id="btnGoToGallery" class="btn btn-primary w-100 rounded-0 py-3 fw-bold">
+                            VER GALERIA DE FOTOS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

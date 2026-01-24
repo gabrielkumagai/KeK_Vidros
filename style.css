@@ -1,0 +1,218 @@
+:root {
+    /* --- PALETA EXCLUSIVA #5E0627 --- */
+    --primary: #5E0627; /* Marsala Intenso */
+    --accent: #5E0627;  
+    
+    --bg-body: #fdfbf7;      
+    --bg-section: #f4f0e6;   
+    
+    --text-dark: #2c2425;
+    --text-muted: #6b5b5d;   
+}
+
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-body);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* --- REGRAS GERAIS (Marsala) --- */
+
+.text-primary, .text-accent { color: var(--primary) !important; }
+.text-dark { color: var(--text-dark) !important; }
+
+.bg-primary { background-color: var(--primary) !important; }
+.bg-dark { background-color: #1a1516 !important; }
+.bg-light-alt { background-color: var(--bg-section) !important; }
+
+/* Botões */
+.btn-primary { 
+    background-color: var(--primary) !important; 
+    border-color: var(--primary) !important;
+    color: #fff;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(94, 6, 39, 0.4);
+}
+
+.btn-primary:hover { 
+    background-color: var(--text-dark) !important; 
+    border-color: var(--text-dark) !important; 
+    transform: translateY(-2px);
+}
+
+.badge {
+    background-color: var(--primary) !important;
+    color: white !important;
+}
+
+.line-accent {
+    width: 70px; height: 4px;
+    background-color: var(--primary);
+    margin-top: 15px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: #1a1516 !important; 
+    box-shadow: 0 4px 20px rgba(94, 6, 39, 0.2);
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary) !important; /* Marsala no Hover */
+}
+
+/* Navbar Brand - Mantém Marsala no TOPO */
+.navbar-brand span {
+    color: var(--primary) !important;
+}
+
+/* --- Hero Slider --- */
+.hero-slide {
+    height: 80vh;
+    min-height: 550px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(20,10,10,0.6) 0%, rgba(20,10,10,0.2) 100%);
+}
+
+.hero-slide h1, .hero-slide p, .hero-slide span {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .hero-slide { height: 65vh; }
+    .display-4 { font-size: 2.2rem; }
+}
+
+/* --- Cards de Produto --- */
+.product-card {
+    background: #fff;
+    border: 1px solid rgba(94, 6, 39, 0.15);
+    transition: all 0.4s ease;
+    height: 100%;
+    overflow: hidden;
+}
+
+.product-card h6 {
+    color: var(--text-dark) !important;
+    font-weight: 800;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(94, 6, 39, 0.2);
+    border-color: var(--primary);
+}
+
+.product-img {
+    height: 260px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s;
+}
+
+.product-card:hover .product-img img { transform: scale(1.1); }
+
+/* --- Ícones de Diferenciais --- */
+.icon-box {
+    color: var(--primary) !important;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.hover-card:hover .icon-box {
+    color: var(--text-dark) !important;
+    transform: scale(1.1);
+}
+
+.hover-card {
+    border-bottom-color: var(--primary) !important;
+}
+
+/* --- Modal --- */
+.modal-img-container {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: var(--bg-section);
+}
+
+.modal-img-container img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+/* --- WhatsApp --- */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px; right: 25px;
+    background-color: #25d366; 
+    color: white;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1050;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+/* --- CORREÇÃO DE RODAPÉ (Tudo Branco) --- */
+footer h4, 
+footer h5, 
+footer h6,
+footer .text-primary, /* Força o "VIDROS", "Localização" e "Redes" a serem brancos */
+footer .text-accent,
+footer span,
+footer i {
+    color: #ffffff !important;
+}
+
+/* Garante que os ícones no rodapé também fiquem brancos */
+footer .fab, 
+footer .fas, 
+footer .fa {
+    color: #ffffff !important;
+}
+
+footer p, footer a {
+    color: rgba(255, 255, 255, 0.7) !important; /* Texto corrido levemente cinza */
+}
+
+footer a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
