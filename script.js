@@ -54,15 +54,15 @@ const itensHome = [
 // ==========================================
 // Configure aqui os nomes exatos das suas fotos dentro de img/nome_da_pasta/
 const fotosPorProduto = {
-    "Esquadrias": ["1.jpg", "2.jpg"],
+    "Esquadrias": [],
     "Espelhos": ["foto1.jpg", "Espelhos Orgânicos  – Usados para ampliar….jpg"],
-    "Box": ["box1.jpg"],
-    "Vidro Temperado": ["v1.jpg"],
-    "Fachadas": ["f1.jpg"],
-    "Guarda Corpo": ["g1.jpg"],
-    "Cobertura": ["c1.jpg"],
-    "Portão": ["p1.jpg"],
-    "Esquadrias de Alumínio": ["a1.jpg"]
+    "Box": [],
+    "Vidro Temperado": [],
+    "Fachadas": [],
+    "Guarda Corpo": [],
+    "Cobertura": [],
+    "Portão": [],
+    "Esquadrias de Alumínio": []
 };
 
 // ==========================================
@@ -192,12 +192,15 @@ function initGaleria(gridElement) {
             `;
         });
     } else {
+        // SEGURANÇA: Limpa o texto para evitar códigos maliciosos
+        const nomeSeguro = itemNome.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
         // Mensagem caso não tenha fotos cadastradas
         gridElement.innerHTML = `
             <div class="col-12 text-center py-5">
                 <div class="p-5 bg-light-alt rounded shadow-sm d-inline-block border border-secondary border-opacity-10">
                     <i class="fas fa-camera fa-3x mb-3 text-muted"></i>
-                    <p class="text-muted mb-0">Em breve adicionaremos fotos de <strong>${itemNome}</strong>.</p>
+                    <p class="text-muted mb-0">Em breve adicionaremos fotos de <strong>${nomeSeguro}</strong>.</p>
                     <a href="https://wa.me/5514981266008" class="btn btn-sm btn-outline-dark mt-3 rounded-0">
                         Pedir fotos no WhatsApp
                     </a>
