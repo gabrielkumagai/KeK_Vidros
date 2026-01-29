@@ -180,7 +180,7 @@ function initGaleria(gridElement) {
         waFooter.href = `https://wa.me/5514981266008?text=${encodeURIComponent(msgZap)}`;
     }
 
-    // Lista de Fotos
+    // Identificação da pasta e lista
     let listaFotos = fotosPorProduto[itemNome] || [];
     let pasta = itemNome.toLowerCase()
         .normalize("NFD").replace(/[\u0300-\u036f]/g, "") 
@@ -188,19 +188,19 @@ function initGaleria(gridElement) {
 
     if(itemNome === "Esquadrias de Alumínio") pasta = "esquadrias";
 
-    // Montagem do HTML
     let htmlContent = "";
 
     if(listaFotos.length > 0) {
         listaFotos.forEach((foto, index) => {
             const caminhoImg = `img/${pasta}/${foto}`;
             
-            // --- CONFIGURAÇÃO: 3 COLUNAS ---
-            // 'col-lg-4' define 3 colunas em telas grandes (12/4 = 3)
+            // ADICIONADO: loading="lazy" para não travar o site
+            // ADICIONADO: width e height para evitar layout shift (opcional, mas bom)
             htmlContent += `
                 <div class="col-lg-4 col-md-6 col-6 mb-4">
                     <div class="gallery-item" onclick="abrirImagemLightbox('${caminhoImg}')">
                         <img src="${caminhoImg}" alt="${itemNome}" 
+                             loading="lazy"
                              onerror="this.parentElement.parentElement.style.display='none'"> 
                         
                         <div class="gallery-overlay">
