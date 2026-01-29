@@ -3,121 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria Exclusiva | Kek Vidros</title>
+    <title>Galeria Exclusiva | K&K Vidros</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link rel="icon" href="img/icon.png" type="image/png">
+
     <link rel="stylesheet" href="style.css">
 
     <meta name="description" content="Confira nossa galeria de projetos entregues: Vidros Temperados, Espelhos, Box e Esquadrias em Garça/SP.">
-    <meta property="og:title" content="Galeria de Projetos | Kek Vidros">
-    <meta property="og:description" content="Veja fotos reais dos nossos serviços e inspire-se para o seu projeto.">
-    <meta property="og:image" content="https://seusite.com.br/img/logo.png">
-    
-    <div id="cookieBanner" class="cookie-banner">
-        <div class="container">
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-                <p class="mb-0 small text-white">
-                    Utilizamos cookies para oferecer melhor experiência. 
-                    Ao continuar, você concorda com nossa política de privacidade.
-                </p>
-                <button id="btnAcceptCookies" class="btn btn-primary btn-sm px-4 fw-bold rounded-0">
-                    OK, ENTENDI
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1XQES3CNV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-P1XQES3CNV');
-    </script>
-
-    
-    <style>
-        /* Estilos Específicos da Galeria */
-        .gallery-title {
-            color: var(--primary);
-            font-weight: 700;
-            letter-spacing: -1px;
-            text-transform: uppercase;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-
-        .gallery-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 50%; transform: translateX(-50%);
-            width: 80px; height: 3px;
-            background-color: var(--primary);
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 4px;
-            overflow: hidden;
-            height: 350px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.4s ease;
-            background-color: #fff;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(94, 6, 39, 0.15);
-        }
-
-        .gallery-item img {
-            width: 100%; height: 100%; object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-            filter: brightness(0.95);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(94, 6, 39, 0.4);
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; transition: opacity 0.3s;
-        }
-
-        .gallery-item:hover .gallery-overlay { opacity: 1; }
-
-        .gallery-icon {
-            color: white; font-size: 2rem;
-            transform: scale(0.8); transition: transform 0.3s;
-        }
-
-        .gallery-item:hover .gallery-icon { transform: scale(1); }
-
-        .cta-section {
-            background-color: var(--bg-section);
-            border-top: 1px solid rgba(94, 6, 39, 0.1);
-        }
-    </style>
+    <meta property="og:title" content="Galeria de Projetos | K&K Vidros">
+    <meta property="og:image" content="https://kek-vidros.vercel.app/img/logo.png">
 </head>
 <body class="bg-body">
 
-    <a href="https://wa.me/5514981266008" class="whatsapp-btn shadow-lg" target="_blank">
+    <a href="https://wa.me/5514981266008" class="whatsapp-btn shadow-lg" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">KEK<span>VIDROS</span></a>
+            <a class="navbar-brand fw-bold" href="index.html">K&K<span>VIDROS</span></a>
             <a href="index.html#catalogo" class="btn btn-outline-light btn-sm rounded-0 px-4">
                 <i class="fas fa-arrow-left me-2"></i> Voltar
             </a>
@@ -133,22 +41,15 @@
         <div id="gallery-grid" class="row g-4"></div>
     </main>
 
-    <section class="cta-section py-5 mt-5">
-        <div class="container text-center" data-aos="fade-up">
-            <div class="row justify-content-center">
+   <section class="cta-section py-5 mt-5">
+        <div class="container text-center"> <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <h3 class="fw-bold mb-3" style="color: var(--primary);">Transforme seu ambiente hoje</h3>
                     <p class="text-muted mb-4 fs-5">Gostou da qualidade do acabamento? Fale diretamente com nossos especialistas.</p>
                     
-                    <a id="waLinkFooter" href="#" target="_blank" class="btn btn-primary btn-lg rounded-0 px-5 py-3 fw-bold shadow">
+                    <a id="waLinkFooter" href="https://wa.me/5514981266008" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg rounded-0 px-5 py-3 fw-bold shadow">
                         <i class="fab fa-whatsapp me-2"></i> SOLICITAR ORÇAMENTO AGORA
                     </a>
-                    
-                    <p class="small text-muted mt-3">
-                        <i class="fas fa-check-circle me-1" style="color: var(--primary);"></i> Orçamento sem compromisso
-                        <span class="mx-2">•</span>
-                        <i class="fas fa-check-circle me-1" style="color: var(--primary);"></i> Atendimento rápido
-                    </p>
                 </div>
             </div>
         </div>
@@ -157,13 +58,36 @@
     <footer class="bg-dark text-white pt-5 pb-3">
         <div class="container">
             <div class="text-center">
-                <h4 class="fw-bold mb-3">KEK<span>VIDROS</span></h4>
+                <h4 class="fw-bold mb-3">K&K<span>VIDROS</span></h4>
                 <p class="small opacity-75">Qualidade e sofisticação em cada detalhe.</p>
+                
+                <div class="d-flex justify-content-center gap-3 my-3">
+                     <a href="https://www.instagram.com/kekvidros/" target="_blank" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                     <a href="https://www.facebook.com/kek.vidros" target="_blank" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                     <a href="https://wa.me/5514981266008" target="_blank" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+                </div>
+
                 <hr class="border-secondary opacity-25 my-4">
-                <p class="small opacity-50">&copy; 2026 Kek Vidros. Todos os direitos reservados.</p>
+                <p class="small opacity-50">© 2026 K&K Vidros. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+                <p class="mb-0 small text-white">
+                    Utilizamos cookies para oferecer melhor experiência. 
+                    Ao continuar, você concorda com nossa <a href="politica.html" class="text-white text-decoration-underline">política de privacidade</a>.
+                </p>
+                <button id="btnAcceptCookies" class="btn btn-primary btn-sm px-4 fw-bold rounded-0">OK, ENTENDI</button>
+            </div>
+        </div>
+    </div>
+    
+    <button id="btnBackToTop" class="btn btn-primary rounded-circle shadow" style="display: none; position: fixed; bottom: 90px; right: 25px; width: 50px; height: 50px; z-index: 1000;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">

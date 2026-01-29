@@ -28,11 +28,9 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.5px;
 }
 
-/* --- REGRAS GERAIS (Marsala) --- */
-
+/* --- REGRAS GERAIS --- */
 .text-primary, .text-accent { color: var(--primary) !important; }
 .text-dark { color: var(--text-dark) !important; }
-
 .bg-primary { background-color: var(--primary) !important; }
 .bg-dark { background-color: #1a1516 !important; }
 .bg-light-alt { background-color: var(--bg-section) !important; }
@@ -76,15 +74,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link:hover, .nav-link.active {
-    color: var(--primary) !important; /* Marsala no Hover */
+    color: var(--primary) !important;
 }
 
-/* Navbar Brand - Mantém Marsala no TOPO */
 .navbar-brand span {
     color: var(--primary) !important;
 }
 
-/* --- Hero Slider --- */
+/* --- Hero Slider (Carrossel) --- */
 .hero-slide {
     height: 80vh;
     min-height: 550px;
@@ -96,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to right, rgba(20,10,10,0.6) 0%, rgba(20,10,10,0.2) 100%);
+    background: linear-gradient(to right, rgba(20,10,10,0.7) 0%, rgba(20,10,10,0.3) 100%);
 }
 
 .hero-slide h1, .hero-slide p, .hero-slide span {
@@ -109,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
     .display-4 { font-size: 2.2rem; }
 }
 
-/* --- Cards de Produto --- */
+/* --- Cards de Produto (Home) --- */
 .product-card {
     background: #fff;
     border: 1px solid rgba(94, 6, 39, 0.15);
@@ -143,6 +140,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .product-card:hover .product-img img { transform: scale(1.1); }
 
+/* Overlay botão ver detalhes */
+.overlay-clean {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(94, 6, 39, 0.3);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s;
+}
+.product-card:hover .overlay-clean { opacity: 1; }
+
 /* --- Ícones de Diferenciais --- */
 .icon-box {
     color: var(--primary) !important;
@@ -170,46 +177,47 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%; height: 100%; object-fit: cover;
 }
 
-/* --- WhatsApp --- */
+/* --- WhatsApp Button (Flutuante) --- */
 .whatsapp-btn {
     position: fixed;
-    bottom: 25px; right: 25px;
-    background-color: #25d366; 
-    color: white;
-    width: 60px; height: 60px;
+    bottom: 25px; 
+    right: 25px;
+    background-color: #25d366 !important;
+    color: white !important;
+    width: 60px; 
+    height: 60px;
     border-radius: 50%;
-    display: flex; justify-content: center; align-items: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
     font-size: 30px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 1050;
+    z-index: 9999; /* Garante que fique acima de tudo */
     text-decoration: none;
     transition: transform 0.3s;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
-.whatsapp-btn:hover {
-    transform: scale(1.1);
+.whatsapp-btn:hover { 
+    transform: scale(1.1); 
+    color: white !important;
 }
 
-/* --- CORREÇÃO DE RODAPÉ (Tudo Branco) --- */
-footer h4, 
-footer h5, 
-footer h6,
-footer .text-primary, /* Força o "VIDROS", "Localização" e "Redes" a serem brancos */
+/* --- Rodapé --- */
+footer {
+    background-color: #1a1516 !important;
+}
+
+footer h4, footer h5, footer h6,
+footer .text-primary, 
 footer .text-accent,
-footer span,
-footer i {
+footer span, footer i, footer .fab, footer .fas {
     color: #ffffff !important;
 }
 
-/* Garante que os ícones no rodapé também fiquem brancos */
-footer .fab, 
-footer .fas, 
-footer .fa {
-    color: #ffffff !important;
-}
-
-footer p, footer a {
-    color: rgba(255, 255, 255, 0.7) !important; /* Texto corrido levemente cinza */
+footer p, footer a, footer ul li span {
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 footer a:hover {
@@ -217,17 +225,95 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* --- Banner de Cookies (LGPD) - NOVO --- */
+/* --- Banner Cookies --- */
 .cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--text-dark); /* Fundo escuro */
-    color: #fff;
-    padding: 15px 0;
-    z-index: 9999; /* Fica acima de tudo */
+    position: fixed; bottom: 0; left: 0; width: 100%;
+    background-color: var(--text-dark);
+    color: #fff; padding: 15px 0;
+    z-index: 9999;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-    display: none; /* Começa invisível, o JS que vai mostrar */
-    border-top: 2px solid var(--primary); /* Detalhe na cor da marca */
+    display: none;
+    border-top: 2px solid var(--primary);
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS DA GALERIA
+   ========================================= */
+.gallery-title {
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.gallery-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 80px; height: 3px;
+    background-color: var(--primary);
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 350px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    background-color: #fff;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(94, 6, 39, 0.15);
+}
+
+.gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.95);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(94, 6, 39, 0.4);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+.gallery-icon {
+    color: white; font-size: 2rem;
+    transform: scale(0.8); transition: transform 0.3s;
+}
+
+.gallery-item:hover .gallery-icon { transform: scale(1); }
+
+/* --- Seção de Chamada (CTA) e Botão do Footer --- */
+.cta-section {
+    background-color: var(--bg-section);
+    border-top: 1px solid rgba(94, 6, 39, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+#waLinkFooter {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary) !important;
+    color: white !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
